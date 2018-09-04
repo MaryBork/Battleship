@@ -30,3 +30,54 @@
   #OUTPUT "SORRY" or "CONGRATULATIONS"
   #OUTPUT HOW MANY SHOTS IT TOOK WINNER TO SINK OPPONENT
   #OUTPUT TOTAL TIME GAME TOOK TO PLAY
+
+#________________________________________________________________
+
+
+  puts "Please add your name: "
+  user = gets.upcase.chomp
+
+  puts "HELLO #{user}! DO YOU WANT TO [P]LAY, [R]EAD INSTRUCTIONS, or [Q]UIT?"
+  entrance_response = gets.chomp.to_s.upcase
+
+
+  if entrance_response == "P"
+    puts "Enters Game Sequence"
+  elsif entrance_response == "R"
+    puts "THESE ARE INSTRUCTIONS"
+    puts "Repeats Entrance Question Sequence"
+  elsif entrance_response == "Q"
+    puts "Ends entrance question sequence--terminates program"
+  else
+    puts "That is an invalid response!"
+    puts "Repeats Entrance Question Sequence"
+  end
+
+  #entrance_response = "P"
+
+  def Game_Sequence_Activated
+    puts "Computer_board_activated"
+    puts "Player_board_activated"
+    puts "Display_User_Board"
+    puts "Game_Sequence_Enter"
+  end
+
+  def Game_Sequence_Enter
+    while hit != HIT_SUNK_LAST_SHIP
+      puts "User_Turn"
+      puts "Display_User_Board"
+      puts "Display_Hit_or_Miss_Message"
+      puts "Computer_Turn"
+      puts "Display_Hit_or_Miss_Message"
+      puts "Display_User_Board"
+    end
+    If hit == HIT_SUNK_LAST_SHIP
+    puts "GAME_SEQUENCE_END"
+    end
+  end
+
+  def GAME_SEQUENCE_END
+    puts "Display_Game_END_MESSAGE"
+    puts "DISPLAY_SHOTS_TAKEN"
+    puts "DISPLAY_TOTAL_TIME"
+  end
